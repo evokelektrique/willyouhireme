@@ -10,7 +10,7 @@ const getRandomGif = async (search) => {
     api_key: "Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g", // I have no idea, It was publicly being used in their website(Giphy), yoink
     limit: 100,
   });
-  const request = await fetch('http://api.giphy.com/v1/gifs/search?' + params.toString())
+  const request = await fetch('https://api.giphy.com/v1/gifs/search?' + params.toString())
   const response = await request.json();
 
   const randomPick = response.data[Math.floor(Math.random() * response.data.length)];
